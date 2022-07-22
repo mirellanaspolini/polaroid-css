@@ -1,118 +1,214 @@
 body {
-  background-color: #ffe589;
+    background-color: #ffe589;
 }
 
 .corpo-camera {
-  margin: 0 auto;
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 470px;
-  height: 260px;
-  background: #dfdede;
-  border-radius: 30px 30px 0px 0px;
-  box-shadow: 5px 0px 3px #ebbd77;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 440px;
+    height: 240px;
+    background: #f0f0f0;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 5px 0 3px #d3b383d7;
 }
 
 .corpo-camera > div {
-  margin: 20px;
+    margin: 20px;
 }
 
-.retangulo {
-  box-sizing: border-box;
-  width: 79px;
-  height: 135px;
-  border: 3px solid #726b6b;
-  background: #8e8e8e;
-  border-radius: 14px;
+.flash {
+    box-sizing: border-box;
+    width: 95px;
+    height: 95px;
+    border: 3px solid #3b3b3b;
+    background: #8e8e8e;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px #cecece, inset 0 0 0 3px #838383, inset 0 0 0 6px #5f5e5e, inset 0 0 0 8px #838383, inset 0 0 0 11px #636160, inset 0 0 0 13px #838383, inset 0 0 0 16px #5f5e5e, inset 0 0 0 18px #838383, inset 0 0 0 21px #5f5e5e, inset 0 0 0 23px #838383, inset 0 0 0 26px #5f5e5e;
 }
 
-.detalhe-lente {
-  position: absolute;
-  left: 215px;
-  top: -120px;
-  width: 25px;
-  height: 25px;
-  background-color: #353535;
-  border-radius: 50%;
+.flash::after {
+    content: " ";
+    display: block;
+    width: 98%;
+    border-radius: 4px;
+    margin-top: 27px;
+    height: 35px;
+    background-color: #9e9e9e;
+    border: 1px solid #575757;
+    box-shadow: inset 0 -2px 2px 4px #747474ad, inset 0 12px 5px #bbbbbb, inset 0 15px 4px #636363;
 }
 
-.circulo {
-  box-sizing: border-box;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: linear-gradient(to bottom right, #2b2b2b 50%, #0c0c0c 50%);
-  border: 40px outset #1a1a1a;
-  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.43);
+.lente {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #2b2b2b 50%, #0c0c0c 50%);
+    border: 35px outset #1a1a1a;
+    margin: 30px 15px !important;
+    box-shadow: 0 0 0 15px #fd8da9, 0 0 0 16px #9b5164, inset 0 0 0 6px #000000, inset 0 0 0 12px #0e0e0e, 10px 9px 8px 6px rgba(0, 0, 0, 0.43);
+}
+
+.lente::after {
+    content: " ";
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    background-color: #5f535f;
+    border-radius: 50%;
+}
+
+.lente::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 15px;
+    top: -65px;
+    width: 45px;
+    height: 12px;
+    background: linear-gradient(to right,#f87e75 20%,#fbf46d 25% 40%,#b4fe98 45% 60%,#77e4d4 65% 80%,#998ceb 85% 100%
+    );
 }
 
 .quadrado {
-  box-sizing: border-box;
-  width: 90px;
-  height: 90px;
-  border: 3px solid #14110f;
-  background: #1c1815;
-  border-radius: 15px;
+    width: 85px;
+    height: 85px;
+    background: #303030;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 23px solid;
 }
 
-.polaroid {
-  position: relative;
+.quadrado::after {
+    content: "⃜";
+    display: block;
+    color: #4b4b4b;
+    font-size: 50px;
+    text-align: center;
+    line-height: 0.97;
+    width: 45px;
+    height: 18px;
+    margin-left: -5px;
+    border-radius: 20px;
+    margin-top: 75px;
+    background-color: #0e0e0e;
+    border: 2px solid #000000;
 }
 
-.btn {
-  position: absolute;
-  border: none;
-  padding: 24px;
-  background-color: #6f0c0c;
-  border-radius: 30px;
-  cursor: pointer;
-  top: -45px;
+.quadrado::before {
+    content: " ";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+    margin-left: -15px;
+    margin-top: -15px;
+    border-radius: 50%;
+    border: 35px outset #707070;
 }
 
-.foto {
-  box-sizing: border-box;
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  left: 90px;
-  top: -235px;
-  background-image: url(https://img.freepik.com/vetores-gratis/gato-bonito-segurando-a-ilustracao-de-icone-do-vetor-dos-desenhos-animados-de-bola-de-fios-conceito-de-icone-de-natureza-animal-isolado-de-vetor-premium-estilo-de-desenho-animado-plano_138676-4233.jpg);
-  background-position: center;
-  background-size: 100%;
-  border-width: 20px 20px 50px 20px;
-  border-style: solid;
-  border-color: #ffffff;
-  z-index: -1;
-  transition: 0.02s;
+button {
+    box-sizing: border-box;
+    position: absolute;
+    top: -70px;
+    left: 17px;
+    padding: 24px;
+    background-color: #8b1212;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 5px outset #a01835;
 }
 
-.polaroid button:focus ~ .foto {
-  transform: translateY(330px);
-  z-index: 1;
+button:focus {
+    background-color: #610909;
+    border: 5px inset #9c1a36;
 }
 
 .base-camera {
-  position: relative;
-  margin: 0 auto;
-  width: 490px;
+    position: relative;
+    margin: 0 auto;
+    width: 510px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    height: 85px;
+    background: #fd8da9;
+    border-top: 20px solid #ffffff;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 4px 5px 3px #928065b4, 0 -8px 20px 8px inset #9b5164ad;
 }
 
-.detalhe {
-  position: absolute;
-  width: 390px;
-  height: 30px;
-  left: 50px;
-  top: 60px;
-  background: #000000;
-  border-radius: 3px;
+.base-camera::after {
+    content: " ";
+    height: 442px;
+    position: absolute;
+    bottom: -155px;
+    left: 238px;
+    border-style: solid;
+    border-width: 35px 35px 35px 0;
+    border-color: transparent #c4c0c0 transparent transparent;
+    transform: rotate(90deg);
 }
 
-.base-camera2 {
-  box-sizing: border-box;
-  height: 135px;
-  background: #404040;
-  border-top: 30px solid #ffffff;
-  border-radius: 10px 10px 20px 20px;
-  box-shadow: 5px 8px 3px #ebbd77;
+.slot {
+    width: 380px;
+    height: 30px;
+    background: #161616;
+    margin: 35px auto auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 -5px 7px 8px inset #0000009c;
+    background: linear-gradient(to bottom,#888279da 35%,#1a1a1ae6 50%,#0f0f0fdc 60%);
+}
+
+.foto {
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 80px;
+    top: -215px;
+    background-color: #dadada;
+    border: 20px solid #ebebeb;
+    border-bottom-width: 60px;
+    z-index: -1;
+}
+
+.foto::after {
+    content: " ";
+    /* background-image: url(https://i.pinimg.com/736x/a1/ad/b5/a1adb5f5fd176758d32953e904abddb1.jpg); */
+    display: block;
+    width: 210px;
+    height: 170px;
+    background-image: url(https://i.pinimg.com/736x/5b/cb/9a/5bcb9a21cb6c7c1f940df91012322196.jpg);
+    background-size: 100%;
+    background-position: center;
+    opacity: 0;
+}
+
+button:focus + .foto {
+    animation: foto-animacao 0.5s ease forwards;
+}
+
+button:focus + .foto:after {
+    animation: foto-revelando 6s linear forwards 1s;
+}
+
+@keyframes foto-animacao {
+    100% {
+        transform: translateY(340px);
+        box-shadow: 4px 5px 3px #af9874b4;
+    }
+}
+
+@keyframes foto-revelando {
+    100% {
+        opacity: 1;
+    }
 }
